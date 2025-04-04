@@ -20,8 +20,9 @@ if(process.env.NODE_ENV ==="development"){
   });
   }
 
-routes.get('/',(req,res)=>{
-  res.send('hey');
+routes.get('/admin',(req,res)=>{
+  let success = req.flash('productsuccess');
+  res.render('createproduct',{success});
 });
 
 
